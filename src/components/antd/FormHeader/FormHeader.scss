@@ -1,0 +1,18 @@
+@import '../../../index.scss';
+
+.form-title{
+    justify-content: center;
+    background: color(primary);
+    padding: 2px;
+    margin-bottom: 20px;
+    padding: 6px 30px;
+   
+}
+.form-title h3{
+    color: color(white-c) !important;
+    margin: 0;
+}
+.form-header{
+    display: flex;
+    border-left: 4px color(primary) solid;
+}

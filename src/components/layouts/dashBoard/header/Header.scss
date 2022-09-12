@@ -1,0 +1,36 @@
+.top-header-h {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 101;
+    background: #001529;
+    // display: flex;
+    // justify-content: end;
+    justify-content:flex-end;
+    // margin-bottom: 1%;
+    padding: 0.6em 2em;
+  }
+
+  .topbar-btn-wrapper-h {
+    // width:max-content;
+    // padding-left: 70%;
+    padding: 3px;
+    // display: flex;
+  }
+  .topbar-btn-wrapper:hover {
+    // background: #015099;
+  }
+  .topbar-btn {
+    background: transparent !important;
+    border: none !important;
+    color: white !important;
+    // margin-top: 6px !important;
+    // left: 1691px !important;
+    // top: 50px  !important;
+  }
+  .topbar-btn :hover {
+    //  background: #015099 !important;
+    // color: color(white-c);
+  }
