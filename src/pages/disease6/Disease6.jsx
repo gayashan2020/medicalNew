@@ -19,6 +19,8 @@ import {
   setData,
 } from "../../config/LocalStorage";
 import "./Disease6.scss";
+import pLow from "../../assets/images/pLow.png";
+import pHigh from "../../assets/images/pHigh.png";
 const { TabPane } = Tabs;
 const columns = [
   {
@@ -393,25 +395,28 @@ class Disease6 extends Component {
                 <Input name="pneumonia" disabled={true} value={pneumonia} />
               </$Col>
             </$Row>
-            {/* <$Row className="jus-con-cen row-items">
-              <$Col xl={5} sm={12}>
-                <p>Risk of Heart Attack</p>
-              </$Col>
-              <$Col xl={10}>
-                <Input name="heart" disabled={true} value={heart} />
-              </$Col>
-            </$Row> */}
             <$Row>
               <$Col xl={9}></$Col>
               <$Col xl={7} style={{ padding: "20px" }}>
                 <$Button onClick={this.submit}>View Suggestions</$Button>
               </$Col>
             </$Row>
-            <$Row className="jus-con-cen row-items">
-              <$Col xl={15} style={{ padding: "20px" }}>
-                <$TextArea />
-              </$Col>
-            </$Row>
+            {pneumonia && (pneumonia === "Low" || pneumonia === "Medium") && (
+              <$Row className="jus-con-cen row-items">
+                <$Col xl={15} style={{ padding: "20px" }}>
+                  {/* <$TextArea /> */}
+                  <Image src={pLow}></Image>
+                </$Col>
+              </$Row>
+            )}
+            {pneumonia && pneumonia === "High" && (
+              <$Row className="jus-con-cen row-items">
+                <$Col xl={15} style={{ padding: "20px" }}>
+                  {/* <$TextArea /> */}
+                  <Image src={pHigh}></Image>
+                </$Col>
+              </$Row>
+            )}
           </$Col>
         </$Row>
         <LayoutFooter />

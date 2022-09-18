@@ -21,6 +21,10 @@ const contentStyle = {
   background: "#364d79",
 };
 
+const bodyStyle = {
+  height: "50vh",
+};
+
 class Home extends Component {
   onChange = (currentSlide) => {
     console.log(currentSlide);
@@ -52,7 +56,7 @@ class Home extends Component {
             <h3 style={contentStyle}>4</h3>
           </div>
         </Carousel>
-        <div>
+        <div style={bodyStyle}>
           <$Row style={{ paddingLeft: "5%" }}>
             <h2>Click here to view</h2>
           </$Row>

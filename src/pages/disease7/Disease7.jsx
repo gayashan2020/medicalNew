@@ -19,6 +19,8 @@ import {
   setData,
 } from "../../config/LocalStorage";
 import "./Disease7.scss";
+import wLow from "../../assets/images/wLow.png";
+import wHigh from "../../assets/images/wHigh.png";
 const { TabPane } = Tabs;
 const columns = [
   {
@@ -407,11 +409,22 @@ class Disease7 extends Component {
                 <$Button onClick={this.submit}>View Suggestions</$Button>
               </$Col>
             </$Row>
-            <$Row className="jus-con-cen row-items">
-              <$Col xl={15} style={{ padding: "20px" }}>
-                <$TextArea />
-              </$Col>
-            </$Row>
+            {wheeze && (wheeze === "Low" || wheeze === "Medium") && (
+              <$Row className="jus-con-cen row-items">
+                <$Col xl={15} style={{ padding: "20px" }}>
+                  {/* <$TextArea /> */}
+                  <Image src={wLow}></Image>
+                </$Col>
+              </$Row>
+            )}
+            {wheeze && wheeze === "High" && (
+              <$Row className="jus-con-cen row-items">
+                <$Col xl={15} style={{ padding: "20px" }}>
+                  {/* <$TextArea /> */}
+                  <Image src={wHigh}></Image>
+                </$Col>
+              </$Row>
+            )}
           </$Col>
         </$Row>
         <LayoutFooter />

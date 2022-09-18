@@ -19,6 +19,10 @@ import {
   setData,
 } from "../../config/LocalStorage";
 import "./Disease8.scss";
+import hLow1 from "../../assets/images/hLow1.png";
+import hLow2 from "../../assets/images/hLow2.png";
+import hLow3 from "../../assets/images/hLow3.png";
+import hHigh from "../../assets/images/hHigh.png";
 const { TabPane } = Tabs;
 const columns = [
   {
@@ -407,11 +411,24 @@ class Disease8 extends Component {
                 <$Button onClick={this.submit}>View Suggestions</$Button>
               </$Col>
             </$Row>
-            <$Row className="jus-con-cen row-items">
-              <$Col xl={15} style={{ padding: "20px" }}>
-                <$TextArea />
-              </$Col>
-            </$Row>
+            {heart && (heart === "Low" || heart === "Medium") && (
+              <$Row className="jus-con-cen row-items">
+                <$Col xl={15} style={{ padding: "20px" }}>
+                  {/* <$TextArea /> */}
+                  <Image src={hLow1}></Image>
+                  <Image src={hLow2}></Image>
+                  <Image src={hLow3}></Image>
+                </$Col>
+              </$Row>
+            )}
+            {heart && heart === "High" && (
+              <$Row className="jus-con-cen row-items">
+                <$Col xl={15} style={{ padding: "20px" }}>
+                  {/* <$TextArea /> */}
+                  <Image src={hHigh}></Image>
+                </$Col>
+              </$Row>
+            )}
           </$Col>
         </$Row>
         <LayoutFooter />
