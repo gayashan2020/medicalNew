@@ -106,7 +106,7 @@ const Header = (props) => {
               alignContent: "flex-start",
               paddingRight: "45%",
               paddingLeft: "5%",
-              fontSize: 24,
+              fontSize: 20,
               color: "GrayText",
             }}
           >
@@ -114,7 +114,7 @@ const Header = (props) => {
           </h2>
           <$Menu.Item
             key={RoutesConstant.home}
-            style={{fontSize:24}}
+            style={{fontSize:20}}
             icon={Mainmenu[0]}
             onClick={() => history.push(RoutesConstant.home)}
           >
@@ -122,7 +122,7 @@ const Header = (props) => {
           </$Menu.Item>
           <$Menu.Item
             key={RoutesConstant.contactUs}
-            style={{fontSize:24}}
+            style={{fontSize:20}}
             icon={Mainmenu[3]}
             onClick={() => history.push(RoutesConstant.contactUs)}
           >

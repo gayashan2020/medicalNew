@@ -289,7 +289,7 @@ class Disease6 extends Component {
                 </Radio.Group>
               </$Col>
             </$Row>
-            <$Row className="jus-con-cen row-items">
+            {/* <$Row className="jus-con-cen row-items">
               <$Col xl={5} sm={12}>
                 <p>Enter cholesterol level</p>
               </$Col>
@@ -300,7 +300,7 @@ class Disease6 extends Component {
                   value={form.Cholesterol}
                 />
               </$Col>
-            </$Row>
+            </$Row> */}
             <$Row className="jus-con-cen row-items">
               <$Col xl={5} sm={12}>
                 <p>Enter Pulse</p>

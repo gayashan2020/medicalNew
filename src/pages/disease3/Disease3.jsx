@@ -12,7 +12,13 @@ import welcome from "../../assets/images/welcome.jpg";
 import { LayoutHeader } from "../../components/layouts/dashBoard/header";
 import { LayoutFooter } from "../../components/layouts/dashBoard/footer";
 import { RoutesConstant } from "../../assets/constants";
-import { setAccessToken, getAccessToken, setData } from "../../config/LocalStorage";
+import {
+  setAccessToken,
+  getAccessToken,
+  setData,
+} from "../../config/LocalStorage";
+import database from "../../config/firebase";
+import { getDatabase, ref, onValue } from "firebase/database";
 import "./Disease3.scss";
 const { Step } = Steps;
 const steps = [
@@ -50,7 +56,21 @@ class Disease3 extends Component {
 
   componentDidMount = async () => {
     let data = getAccessToken();
+    let fbData = ref(database, "UNIT_1");
+    const form = { ...this.state.form };
+    onValue(fbData, (snapshot) => {
+      const data = snapshot.val();
+      console.log(data);
+      form.Temperature = data.temp;
+      form.pulse = data.pulse;
+      form.oxygen = data.SO2;
+      form.spo2 = data.FLOW;
+      this.setState({
+        form,
+      });
+    });
     this.setState({
+      form,
       data: JSON.parse(data),
     });
   };
@@ -96,7 +116,7 @@ class Disease3 extends Component {
     this.setState({ loading: true });
     setData(JSON.stringify(data));
     this.props.history.push(RoutesConstant.disease4);
-    message.success("Processing complete!")
+    message.success("Processing complete!");
     this.setState({ loading: false });
   };
 
@@ -150,10 +170,7 @@ class Disease3 extends Component {
                 </Button>
               )}
               {current === steps.length - 1 && (
-                <Button
-                  type="primary"
-                  onClick={() => this.submit()}
-                >
+                <Button type="primary" onClick={() => this.submit()}>
                   Done
                 </Button>
               )}
