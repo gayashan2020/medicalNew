@@ -181,7 +181,7 @@ class Disease7 extends Component {
     const data = {
       age: age,
       Gender: Gender,
-      Cholesterol: Cholesterol,
+      Cholesterol: Cholesterol||0,
       Pulse: Pulse,
       Smoke: Smoke,
       Alcohol: Alcohol,

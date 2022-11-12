@@ -49,9 +49,9 @@ class Disease10 extends Component {
   };
   submit = async () => {
     const form = { ...this.state.form };
-    const oxygen = form.oxygen;
-    const pulse = form.pulse;
-    const Temperature = form.Temperature;
+    const oxygen = parseInt(form.oxygen);
+    const pulse = parseInt(form.pulse);
+    const Temperature = parseInt(form.Temperature);
 
     const data = {
       oxygen: oxygen,
@@ -171,7 +171,11 @@ class Disease10 extends Component {
                 <p>Risk of Covid Infection</p>
               </$Col>
               <$Col xl={10}>
-                <Input name="heart" disabled={true} value={covid} />
+                <Input
+                  name="heart"
+                  disabled={true}
+                  value={parseInt(covid) > 0 ? covid : 0}
+                />
               </$Col>
             </$Row>
             <$Row>
