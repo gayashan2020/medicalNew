@@ -131,20 +131,10 @@ class Login extends Component {
     };
 
     try {
-      //send user ID & password and get tokens
-      // let data = await User.login(dataObj);
-      // this.resetFields();
-
-      // //execute login function in AuthContext.js
-      // //await this.context.logIn(data, this.props);
-      // removeAccessToken();
-      // removeUser();
-      // setAccessToken(data.token);
-      // setUser(JSON.stringify(data.details));
 
       //stop loading
       this.setState({ loading: false });
-      this.props.history.push(RoutesConstant.dashboard);
+      this.props.history.push(RoutesConstant.home);
       return;
 
     } catch (error) {

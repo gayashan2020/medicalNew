@@ -179,13 +179,20 @@ export default () => {
       Layout={DashBoardLayOut}
       accessLevel={StringConstant.admin}
     />,
+    <PrivateRoutes
+    exact
+    key="home"
+    path={RoutesConstant.home}
+    component={Home}
+    isLayOut={true}
+    Layout={DashBoardLayOut}
+    accessLevel={StringConstant.admin}
+  />,
     <Route exact key="login" path={RoutesConstant.login} component={Login} />,
     <Route
       key="root"
       path="/"
-      component={Home}
-      isLayOut={true}
-      Layout={DashBoardLayOut}
+      component={Login}
       accessLevel={StringConstant.admin}
     />,
   ];
