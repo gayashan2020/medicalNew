@@ -10,9 +10,7 @@ import {
   $Col,
   $Row,
 } from "../../../antd";
-import {
-  removeAccessToken,
-} from "../../../../config/LocalStorage";
+import { removeAccessToken } from "../../../../config/LocalStorage";
 import {
   FacebookOutlined,
   TwitterOutlined,
@@ -38,13 +36,11 @@ const Footer = (props) => {
     // } catch (error) {}
   };
 
-
   const { UserOutlined, DownOutlined } = $AntIcons;
 
   function handleButtonClick(e) {}
 
   function handleMenuClick(e) {}
-
 
   const menu = (
     <$Menu onClick={handleMenuClick} className="top-bar-dropdown">
@@ -56,7 +52,7 @@ const Footer = (props) => {
   return (
     <footer class="footer-distributed">
       <div class="footer-right">
-      <a href="#">
+        <a href="#">
           <FacebookOutlined />
         </a>
         <a href="#">
@@ -70,11 +66,11 @@ const Footer = (props) => {
       <div class="footer-left">
         <p class="footer-links">
           <a class="link-1" href="#">
-            071 7644 169
+            mediSafe.research@gmail.com
           </a>
         </p>
 
-        <p>mediSafe.research@gmail.com</p>
+        {/* <p>mediSafe.research@gmail.com</p> */}
       </div>
       <div class="footer-center">
         <p>Copy Rights @2022</p>

@@ -186,7 +186,13 @@ class Disease3 extends Component {
               )}
             </div>
           </$Col>
-          <$Col xl={12} className="bg-image"></$Col>
+          <$Col xl={12}>
+            {steps[current].title === "Temperature" && (
+              <div className="cardT" />
+            )}
+            {steps[current].title === "pulse" && <div className="cardPa" />}
+            {steps[current].title === "oxygen" && <div className="cardO" />}
+          </$Col>
         </$Row>
         <LayoutFooter />
       </>

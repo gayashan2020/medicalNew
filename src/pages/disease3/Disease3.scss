@@ -8,3 +8,27 @@
     background-position: 32% 0%;
     background-size: cover;
   }
+
+  .cardT{
+    height: 60vh;
+    background-position: 32% 0%;
+    background-image: url(../../assets/images/patientDetails/temperature.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .cardO{
+    height: 60vh;
+    background-position: 32% 0%;
+    background-image: url(../../assets/images/patientDetails/oxygen.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .cardPa{
+    height: 60vh;
+    background-position: 32% 0%;
+    background-image: url(../../assets/images/patientDetails/pulse.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

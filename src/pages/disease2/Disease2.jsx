@@ -80,7 +80,9 @@ class Disease2 extends Component {
       <>
         <LayoutHeader />
         <$Row style={{ marginTop: "100px", marginLeft: "5%" }}>
-          <h1>Hello {(data.gender === "male" ? "Mr " : "Miss ") + data.name}</h1>
+          <h1>
+            Hello {(data.gender === "male" ? "Mr " : "Miss ") + data.name}
+          </h1>
         </$Row>
         <$Col style={{ padding: "2%" }}>
           <Steps current={current}>
@@ -88,7 +90,26 @@ class Disease2 extends Component {
               <Step key={item.title} title={item.title} />
             ))}
           </Steps>
-          <div className="steps-content">{steps[current].content}</div>
+          {steps[current].content &&
+            steps[current].content === "First-content" && (
+              <div className="steps-content1"></div>
+            )}
+          {steps[current].content &&
+            steps[current].content === "Second-content" && (
+              <div className="steps-content2"></div>
+            )}
+          {steps[current].content &&
+            steps[current].content === "Third-content" && (
+              <div className="steps-content3"></div>
+            )}
+          {steps[current].content &&
+            steps[current].content === "Fourth-content" && (
+              <div className="steps-content4"></div>
+            )}
+          {steps[current].content &&
+            steps[current].content === "Last-content" && (
+              <div className="steps-content5"></div>
+            )}
           <div className="steps-action">
             {current < steps.length - 1 && (
               <Button type="primary" onClick={() => this.next()}>
@@ -96,10 +117,7 @@ class Disease2 extends Component {
               </Button>
             )}
             {current === steps.length - 1 && (
-              <Button
-                type="primary"
-                onClick={() => this.navigateDisease2()}
-              >
+              <Button type="primary" onClick={() => this.navigateDisease2()}>
                 Done
               </Button>
             )}

@@ -13,6 +13,7 @@ import {
 } from "../../../../config/LocalStorage";
 import "./Header.scss";
 import avater from "../../../../assets/images/avater.png";
+import logo from "../../../../assets/images/medisafeLogo.png";
 import { RoutesConstant } from "../../../../assets/constants";
 import { Menu } from "antd";
 const { HomeOutlined, FileDoneOutlined, LogoutOutlined, PhoneOutlined } =
@@ -83,7 +84,7 @@ const Header = (props) => {
           defaultOpenKeys={getMainPath()}
         >
           <img
-            src={avater}
+            src={logo}
             style={{
               alignContent: "flex-start",
               width: "50px",

@@ -18,6 +18,12 @@ import {
   setData,
 } from "../../config/LocalStorage";
 import "./Disease4.scss";
+import covid from "../../assets/images/coverImages/covid.png";
+import error from "../../assets/images/coverImages/error.jpg";
+import heartattack from "../../assets/images/coverImages/heartattack.png";
+import pneumonia from "../../assets/images/coverImages/pneumonia.png";
+import wheezing from "../../assets/images/coverImages/wheezing.png";
+import xray from "../../assets/images/coverImages/xray.png";
 const { Step } = Steps;
 
 const steps = [
@@ -127,31 +133,27 @@ class Disease4 extends Component {
           }}
         >
           <$Col className="gutter-row" span={6}>
-            <div className="card" onClick={() => this.navigateDisease10()}>
-              Covid
+            <div className="cardC" onClick={() => this.navigateDisease10()}>
             </div>
             <div className="card2">Covid</div>
           </$Col>
           <$Col className="gutter-row" span={6}>
-            <div className="card" onClick={() => this.navigateDisease6()}>
-              Pneumonia
+            <div className="cardP" onClick={() => this.navigateDisease6()}>
             </div>
             <div className="card2">Pneumonia</div>
           </$Col>
           <$Col className="gutter-row" span={6}>
-            <div className="card" onClick={() => this.navigateDisease8()}>
-              Heart Attack
+            <div className="cardH" onClick={() => this.navigateDisease8()}>
             </div>
             <div className="card2">Heart Attack</div>
           </$Col>
           <$Col className="gutter-row" span={6}>
-            <div className="card" onClick={() => this.navigateDisease7()}>
-              Wheezing
+            <div className="cardW" onClick={() => this.navigateDisease7()}>
             </div>
             <div className="card2">Wheezing</div>
           </$Col>
           <$Col className="gutter-row" span={6}>
-            <div className="card" onClick={() => this.navigateDisease9()}>X-ray</div>
+            <div className="cardX" onClick={() => this.navigateDisease9()}></div>
             <div className="card2">X-ray</div>
           </$Col>
         </$Row>

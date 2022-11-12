@@ -20,6 +20,9 @@ import {
 } from "../../config/LocalStorage";
 import { InboxOutlined } from "@ant-design/icons";
 import "./Disease9.scss";
+import XP from "../../assets/images/XP.png";
+import XL from "../../assets/images/XL.png";
+import XC from "../../assets/images/XC.png";
 const { TabPane } = Tabs;
 const { Dragger } = Upload;
 class Disease9 extends Component {
@@ -118,7 +121,7 @@ class Disease9 extends Component {
   };
 
   render() {
-    const { loading } = this.state;
+    const { loading, disease } = this.state;
     return (
       <div>
         <LayoutHeader />
@@ -130,7 +133,7 @@ class Disease9 extends Component {
           <$Col xl={12} sm={12}>
             <$Row className="jus-con-cen row-items">
               <Dragger
-                style={{ width: "100%", padding:'50px' }}
+                style={{ width: "100%", padding: "50px" }}
                 listType="picture"
                 beforeUpload={this.beforeUpload}
                 //   key={this.state.theInputKey}
@@ -170,11 +173,7 @@ class Disease9 extends Component {
                 <p>Disease</p>
               </$Col>
               <$Col xl={10}>
-                <Input
-                  name="heart"
-                  disabled={true}
-                  value={this.state.disease}
-                />
+                <Input name="heart" disabled={true} value={disease} />
               </$Col>
             </$Row>
             <$Row className="jus-con-cen row-items">
@@ -195,11 +194,30 @@ class Disease9 extends Component {
                 <$Button onClick={this.submit}>View Suggestions</$Button>
               </$Col>
             </$Row>
-            <$Row className="jus-con-cen row-items">
-              <$Col xl={15} style={{ padding: "20px" }}>
-                <$TextArea />
-              </$Col>
-            </$Row>
+            {disease && disease === "COVID19 Chest Xray" && (
+              <$Row className="jus-con-cen row-items">
+                <$Col xl={15} style={{ padding: "20px" }}>
+                  {/* <$TextArea /> */}
+                  <Image src={XC}></Image>
+                </$Col>
+              </$Row>
+            )}
+            {disease && disease === "Lung Opacity" && (
+              <$Row className="jus-con-cen row-items">
+                <$Col xl={15} style={{ padding: "20px" }}>
+                  {/* <$TextArea /> */}
+                  <Image src={XL}></Image>
+                </$Col>
+              </$Row>
+            )}
+            {disease && disease === "PNEUMONIA Chest Xray" && (
+              <$Row className="jus-con-cen row-items">
+                <$Col xl={15} style={{ padding: "20px" }}>
+                  {/* <$TextArea /> */}
+                  <Image src={XP}></Image>
+                </$Col>
+              </$Row>
+            )}
           </$Col>
         </$Row>
         <LayoutFooter />

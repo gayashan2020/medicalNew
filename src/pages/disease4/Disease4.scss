@@ -20,3 +20,69 @@
   align-items: center;
   display: flex;
 }
+
+.cardC{
+  border-color: black;
+  border-style: solid;
+  margin: 3%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  background-image: url(../../assets/images/coverImages/covid.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardH{
+  border-color: black;
+  border-style: solid;
+  margin: 3%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  background-image: url(../../assets/images/coverImages/heartattack.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardP{
+  border-color: black;
+  border-style: solid;
+  margin: 3%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  background-image: url(../../assets/images/coverImages/pneumonia.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.cardW{
+  border-color: black;
+  border-style: solid;
+  margin: 3%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  background-image: url(../../assets/images/coverImages/wheezing.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardX{
+  border-color: black;
+  border-style: solid;
+  margin: 3%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  background-image: url(../../assets/images/coverImages/xray.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
